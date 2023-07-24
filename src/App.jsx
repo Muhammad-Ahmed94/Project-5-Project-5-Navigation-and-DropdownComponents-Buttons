@@ -1,50 +1,26 @@
-import Button from "./Button";
-import {
-  RxBell,
-  RxBadge,
-  RxBlendingMode,
-  RxBookmarkFilled,
-  RxComponentBoolean,
-} from "react-icons/rx";
+import Accordion from "./components/Accordion";
 
-const handleClick = () => {
-  console.log("Hi there!...Missed me?");
-};
 function App() {
-  return (
-    <div>
-      <div>
-        <Button onClick={handleClick} className="mb-5" primary rounded>
-          <RxBell />
-          Button 1
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <RxBadge />
-          Button 2
-        </Button>
-      </div>
-      <div>
-        <Button warning outline>
-          <RxBlendingMode />
-          Button 3
-        </Button>
-      </div>
-      <div>
-        <Button success rounded>
-          <RxBookmarkFilled />
-          Button 4
-        </Button>
-      </div>
-      <div>
-        <Button danger>
-          <RxComponentBoolean />
-          Button 5
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "1",
+      label: "Shopify",
+      content: "E-commerce platform for buying and selling products",
+    },
+    {
+      id: "2",
+      label: "YouTube",
+      content: "A E-Media platform to create and watch content",
+    },
+    {
+      id: "3",
+      label: "Instagram",
+      content:
+        "A E-Media platform to create and watch short form content and posts",
+    },
+  ];
+
+  return <Accordion items={items} />;
 }
 
 export default App;
