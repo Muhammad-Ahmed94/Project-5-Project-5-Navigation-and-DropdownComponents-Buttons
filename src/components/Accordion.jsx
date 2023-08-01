@@ -7,7 +7,7 @@ import {
 function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState();
 
-  const handleClick = (index) => {
+  const handleClick = (index, event) => {
     if (expandedIndex === index) {
       setExpandedIndex(-1);
     } else {
